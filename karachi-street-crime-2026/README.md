@@ -41,10 +41,10 @@ Urdu text uses **Nafees Web Naskh**, loaded from
 
     https://cdn.jsdelivr.net/gh/manzarelahi/myfonts@main/nafeesweb.woff
 
-Backup font: Noto Nastaliq Urdu (Google Fonts). Numbers use Inter.
+Backup font: Noto Naskh Arabic (Google Fonts). Numbers use Inter.
 
 Note: the current `nafeesweb` files contain only Latin letters, digits and punctuation,
-so Urdu text falls back to Noto Nastaliq Urdu until they are replaced with a complete
+so Urdu text falls back to Noto Naskh Arabic until they are replaced with a complete
 Nafees Web Naskh. After replacing them, jsDelivr may serve the old file for up to 7 days;
 to refresh it right away, open
 `https://purge.jsdelivr.net/gh/manzarelahi/myfonts@main/nafeesweb.woff` (and the `.ttf` one).
