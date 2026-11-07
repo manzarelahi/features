@@ -1,6 +1,6 @@
 # Karachi street crime 2026 — interactive feature
 
-Self-contained Urdu (RTL) page: `index.html`. No build step; it only loads Google Fonts.
+Self-contained Urdu (RTL) page: `index.html`. No build step; it only loads Google Fonts. It has no headline or byline, so add your own above the embed.
 
 ## Embed on your site
 

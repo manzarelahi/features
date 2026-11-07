@@ -4,380 +4,535 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>کراچی اسٹریٹ کرائم 2026</title>
-<meta name="description" content="کراچی میں یکم جنوری سے 5 نومبر 2026 تک اسٹریٹ کرائم کے 46 ہزار 617 واقعات — انٹرایکٹو رپورٹ">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0d0f14; --panel:#151922; --panel2:#1b202b; --line:#262c39;
-  --ink:#eef1f6; --muted:#9aa3b5; --red:#ff4d4d; --red-soft:rgba(255,77,77,.14);
-  --amber:#ffb547; --blue:#6aa8ff; --green:#3ecf8e;
+  --bg:#ffffff; --surface:#f6f6f4; --surface2:#ecebe7; --line:#e3e1dc;
+  --ink:#16181d; --ink2:#4a505c; --muted:#7a808c;
+  --red:#c42b2b; --red-dark:#7e1616; --red-soft:#fbeaea; --green:#1f7a4d; --green-soft:#e6f3ec;
+  --blue:#2e6db4; --amber:#d7901e; --gray:#a7acb5;
   --ur:"Noto Nastaliq Urdu",serif; --num:"Inter",system-ui,sans-serif;
+  --r:14px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink);font-family:var(--ur);line-height:2.1;font-size:17px;overflow-x:hidden}
-.num{font-family:var(--num);font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate;letter-spacing:-.02em}
-.wrap{max-width:980px;margin:0 auto;padding:0 16px}
-section{padding:56px 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.9;margin-bottom:6px}
-.lede{color:var(--muted);font-size:16px;max-width:680px}
-.kicker{display:inline-flex;align-items:center;gap:8px;color:var(--red);font-size:14px;font-weight:600}
-.kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 var(--red);animation:pulse 1.8s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,77,77,.6)}70%{box-shadow:0 0 0 10px rgba(255,77,77,0)}100%{box-shadow:0 0 0 0 rgba(255,77,77,0)}}
+body{background:var(--bg);color:var(--ink);font-family:var(--ur);font-size:16px;line-height:2.05;overflow-x:hidden}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 
-/* Hero */
-.hero{padding:64px 0 48px;position:relative;overflow:hidden;border-top:0}
-.hero::after{content:"";position:absolute;inset:-40% -20% auto auto;width:620px;height:620px;background:radial-gradient(circle,rgba(255,77,77,.18),transparent 60%);pointer-events:none}
-.hero h1{font-size:clamp(28px,6vw,52px);line-height:1.8;font-weight:700;margin:10px 0 4px;position:relative;z-index:1}
-.hero h1 span{color:var(--red)}
-.byline{color:var(--muted);font-size:14px}
-.big{margin-top:28px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;position:relative;z-index:1}
-.big .num{font-size:clamp(64px,16vw,148px);font-weight:800;line-height:1;color:var(--ink);background:linear-gradient(180deg,#fff,#ff8a8a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.big p{font-size:clamp(17px,2.6vw,22px);color:var(--muted);max-width:340px}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;position:relative;z-index:1}
-.chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:14px;color:var(--muted)}
-.chip b{color:var(--ink);font-weight:600}
-.chip .down{color:var(--green)}
+.sec{padding:44px 0;border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:0;padding-top:24px}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--red);font-size:14px;font-weight:600}
+.eyebrow .n{font-family:var(--num);font-size:12px;font-weight:700;color:#fff;background:var(--red);border-radius:6px;padding:0 7px;line-height:22px}
+.sec h2{font-size:clamp(20px,3.6vw,27px);font-weight:700;line-height:1.95;margin-top:4px}
+.sec .lede{color:var(--ink2);max-width:640px;margin-top:2px}
+.period{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);background:var(--surface);border-radius:999px;padding:0 12px}
 
-/* Clock */
-.clock-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:26px}
-.tick{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;position:relative;overflow:hidden}
-.tick .label{font-size:15px;color:var(--muted)}
-.tick .every{font-size:20px;font-weight:600;margin:2px 0 12px}
-.tick .every .num{font-size:24px;font-weight:700;color:var(--amber)}
-.bar{height:6px;background:var(--panel2);border-radius:6px;overflow:hidden}
-.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--red));border-radius:6px;transform-origin:right}
-.tick .count{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:13px;color:var(--muted)}
-.tick .count .num{font-size:18px;color:var(--ink);font-weight:700}
-.tick.flash{animation:flash .9s}
-@keyframes flash{0%{border-color:var(--red);box-shadow:0 0 0 3px var(--red-soft)}100%{border-color:var(--line);box-shadow:none}}
-.elapsed{margin-top:16px;font-size:14px;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+@media(max-width:760px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--surface);border:1px solid transparent;border-radius:var(--r);padding:14px 14px 10px;text-align:right;transition:border-color .2s,transform .2s,background .2s}
+.kpi:hover{border-color:var(--line);background:#fff;transform:translateY(-2px)}
+.kpi .v{font-size:clamp(26px,4.6vw,36px);font-weight:800;line-height:1.15;letter-spacing:-.02em;text-align:right}
+.kpi .l{font-size:14px;color:var(--ink2);line-height:1.9;margin-top:2px}
+.kpi .d{font-size:12px;line-height:1.9}
+.kpi .go{font-size:12px;color:var(--muted)}
+.tag{display:inline-block;font-family:var(--num);font-weight:700;font-size:12px;border-radius:6px;padding:0 6px;direction:ltr}
+.tag.down{color:var(--green);background:var(--green-soft)}
+.tag.up{color:var(--red);background:var(--red-soft)}
 
-/* Human cost */
-.cost{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;margin-top:26px}
-@media(max-width:720px){.cost{grid-template-columns:1fr}}
-.dots-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
-.dots{display:grid;grid-template-columns:repeat(13,1fr);gap:6px;margin:12px 0 10px;direction:rtl}
-.dot{aspect-ratio:1;border-radius:50%;background:var(--panel2);transition:background .35s,transform .35s}
-.dot.on{background:var(--red);transform:scale(1)}
-.dot.police{box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
-.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted)}
+.seg{display:inline-flex;flex-wrap:wrap;gap:4px;background:var(--surface);border-radius:12px;padding:4px;margin-top:16px}
+.seg button{border:0;background:transparent;border-radius:9px;padding:2px 14px;font-size:14px;line-height:2;color:var(--ink2);transition:background .2s,color .2s}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+
+.quiz{margin-top:18px;background:var(--surface);border-radius:var(--r);padding:18px}
+.quiz .q{font-size:17px;font-weight:600}
+.opts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}
+@media(max-width:520px){.opts{grid-template-columns:1fr}}
+.opt{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:6px 14px;text-align:right;font-size:15px;line-height:2;display:flex;justify-content:space-between;align-items:center;transition:border-color .2s,background .2s,opacity .2s}
+.opt:hover:not([disabled]){border-color:var(--ink2)}
+.opt .mark{font-family:var(--num);font-weight:700;font-size:13px;direction:ltr}
+.opt.right{border-color:var(--red);background:var(--red-soft)}
+.opt.wrong{opacity:.6}
+.opt[disabled]{cursor:default;color:var(--ink)}
+.verdict{margin-top:10px;font-size:15px;color:var(--ink2)}
+.verdict:empty{display:none}
+.verdict b{color:var(--ink)}
+
+.chg{margin-top:14px;opacity:.35;filter:grayscale(1);transition:opacity .6s,filter .6s}
+.chg.on{opacity:1;filter:none}
+.locked{font-size:13px;color:var(--muted);margin-top:8px}
+.locked.hide{display:none}
+.locked button{border:0;background:none;color:var(--blue);font-size:13px;text-decoration:underline}
+.crow{display:grid;grid-template-columns:minmax(150px,1fr) 1.6fr;gap:2px 16px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.crow:last-child{border-bottom:0}
+.crow .name{font-size:15px;line-height:1.8}
+.crow .sub{font-size:12px;color:var(--muted);line-height:1.6}
+.axis{position:relative;height:30px}
+.axis::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--ink2);opacity:.4}
+.axis .bar{position:absolute;top:8px;height:14px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.axis .bar.down{right:50%;background:var(--green);border-radius:0 4px 4px 0}
+.axis .bar.up{left:50%;background:var(--red);border-radius:0 4px 4px 0}
+.axis .bar.down{border-radius:4px 0 0 4px}
+.axis .lab{position:absolute;top:3px;font-family:var(--num);font-size:12px;font-weight:700;white-space:nowrap;opacity:0;transition:opacity .4s .6s;direction:ltr;line-height:24px}
+.chg.on .axis .lab{opacity:1}
+@media(max-width:560px){.crow{grid-template-columns:1fr}}
+.pair{display:grid;gap:4px}
+.pb{display:grid;grid-template-columns:34px 1fr;align-items:center;gap:8px;font-size:11px;color:var(--muted);font-family:var(--num)}
+.pb .t{height:12px;position:relative}
+.pb .f{height:100%;width:0;border-radius:4px 0 0 4px;transition:width 1s cubic-bezier(.2,.8,.2,1);position:absolute;right:0;top:0}
+.pb.y25 .f{background:var(--gray)}.pb.y26 .f{background:var(--red)}
+.pb .v{position:absolute;top:-6px;font-size:12px;font-weight:600;color:var(--ink);white-space:nowrap;direction:ltr;line-height:24px}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--ink2);margin-top:12px;flex-wrap:wrap}
 .legend span{display:inline-flex;align-items:center;gap:6px}
-.legend i{width:11px;height:11px;border-radius:50%;background:var(--red);display:inline-block}
-.legend i.p{box-shadow:inset 0 0 0 2px rgba(255,255,255,.7)}
-.toggle{display:inline-flex;background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px}
-.toggle button{font-family:var(--ur);font-size:14px;line-height:1.9;border:0;background:transparent;color:var(--muted);padding:2px 14px;border-radius:999px;cursor:pointer}
-.toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-.toggle button:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
-.stat-stack{display:grid;gap:14px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
-.stat > .num{font-size:44px;font-weight:800;line-height:1.1}
-.stat .t{color:var(--muted);font-size:15px}
-.stat .delta{font-size:13px;margin-top:2px}
-.down{color:var(--green)}.up{color:var(--red)}
-.note{font-size:13px;color:var(--muted);border-right:3px solid var(--amber);padding-right:12px;margin-top:14px}
+.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
 
-/* Compare */
-.compare{margin-top:26px;display:grid;gap:12px}
-.row{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 18px;cursor:default}
-.row-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-.row-h .name{font-size:17px;font-weight:600}
-.pill{font-family:var(--num);font-size:13px;font-weight:700;padding:2px 10px;border-radius:999px;direction:ltr}
-.pill.down{background:rgba(62,207,142,.13)}.pill.up{background:var(--red-soft)}
-.bars{display:grid;gap:6px;margin-top:6px}
-.b{display:grid;grid-template-columns:44px 1fr 74px;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
-.b .track{height:12px;background:var(--panel2);border-radius:6px;overflow:hidden}
-.b .fill{height:100%;width:0;border-radius:6px;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
-.b.y25 .fill{background:#5b6375}.b.y26 .fill{background:var(--red)}
-.b .v{text-align:left;color:var(--ink);font-size:14px}
-.b .yr{font-family:var(--num);font-size:12px}
+.calc{margin-top:18px;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.calc-top{padding:14px 16px;background:var(--surface)}
+.calc-top .seg{margin-top:0;background:#fff}
+.slider{display:none;margin-top:12px;align-items:center;gap:14px;flex-wrap:wrap;font-size:14px}
+.slider.show{display:flex}
+.slider input{flex:1;min-width:160px;accent-color:var(--red)}
+.slider .num{font-weight:700;font-size:18px}
+.sentence{padding:16px 18px 4px;font-size:18px;line-height:2.3;color:var(--ink2)}
+.sentence b{color:var(--ink);font-weight:700}
+.sentence .num{font-weight:700;color:var(--red)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);margin-top:12px}
+@media(max-width:760px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{background:#fff;padding:14px 16px}
+.tile .ic{width:28px;height:28px;color:var(--ink2)}
+.tile .v{font-family:var(--num);font-size:30px;font-weight:800;line-height:1.3;letter-spacing:-.02em;text-align:right;direction:ltr;unicode-bidi:plaintext}
+.tile .l{font-size:13px;color:var(--ink2);line-height:1.8}
+.tile .every{font-size:12px;color:var(--muted);line-height:1.8}
+.live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-left:6px;animation:pulse 1.6s infinite;vertical-align:middle}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(196,43,43,.5)}70%{box-shadow:0 0 0 8px rgba(196,43,43,0)}100%{box-shadow:0 0 0 0 rgba(196,43,43,0)}}
+.tile.bump .v{animation:bump .7s}
+@keyframes bump{0%{color:var(--red);transform:scale(1.1)}100%{transform:none}}
 
-/* Vehicles */
-.veh{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
-@media(max-width:720px){.veh{grid-template-columns:1fr}}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
-.card h3{font-size:18px;font-weight:600;line-height:1.9;margin-bottom:10px}
-.split{display:flex;height:44px;border-radius:12px;overflow:hidden;margin:6px 0 12px}
-.split div{display:flex;align-items:center;justify-content:center;font-family:var(--num);font-weight:700;font-size:14px;color:#0d0f14;transition:flex-grow 1s cubic-bezier(.2,.8,.2,1);flex-basis:0;min-width:0;white-space:nowrap;overflow:hidden}
-.split .a{background:var(--red)}.split .b2{background:var(--amber)}.split .c{background:var(--blue)}
-.kv{display:flex;justify-content:space-between;font-size:15px;padding:4px 0;border-bottom:1px dashed var(--line)}
-.kv:last-child{border:0}
-.kv .num{font-weight:700}
-.sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-left:8px;vertical-align:middle}
+.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:18px;align-items:center}
+@media(max-width:680px){.wgrid{grid-template-columns:1fr}}
+.waffle{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;max-width:340px;width:100%;direction:rtl}
+.waffle i{aspect-ratio:1;border-radius:4px;background:var(--surface2);transition:background .5s}
+.wkey{display:grid;gap:10px}
+.wk{display:grid;grid-template-columns:14px 1fr auto;gap:12px;align-items:center;padding:10px 14px;border-radius:12px;background:var(--surface);outline:2px solid transparent;transition:outline-color .2s}
+.wk.hl{outline-color:var(--ink)}
+.wk i{width:14px;height:14px;border-radius:4px}
+.wk .t{font-size:15px;line-height:1.8}
+.wk .t small{display:block;font-size:12px;color:var(--muted)}
+.wk .v{font-family:var(--num);font-weight:800;font-size:22px;direction:ltr;text-align:left;line-height:1.3}
+.wk .pc{font-family:var(--num);font-size:12px;color:var(--muted);text-align:left}
+.wnote{font-size:14px;color:var(--ink2);margin-top:14px}
 
-/* Daily */
-.daily{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:26px}
-.d{background:linear-gradient(160deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:18px;padding:20px;text-align:center}
-.d .num{font-size:48px;font-weight:800;color:var(--amber);line-height:1.1}
-.d .t{color:var(--muted);font-size:15px}
-.icons{display:flex;flex-wrap:wrap;justify-content:center;gap:3px;margin-top:12px;direction:ltr}
-.icons i{width:7px;height:7px;border-radius:2px;background:var(--amber);opacity:.85}
-.icons i.part{opacity:.35}
+.lives{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;margin-top:18px;align-items:start}
+@media(max-width:680px){.lives{grid-template-columns:1fr}}
+.people{display:grid;grid-template-columns:repeat(12,1fr);gap:6px 4px;direction:rtl}
+.people svg{width:100%;height:auto;display:block;color:var(--surface2);transition:color .35s,opacity .35s}
+.people svg.k{color:var(--red)}
+.people svg.p{color:var(--red-dark)}
+.people svg.dim{opacity:.35}
+.people svg.ghost{color:var(--gray)}
+.lives-text{background:var(--surface);border-radius:var(--r);padding:14px 18px}
+.lives-text .big{font-size:42px;font-weight:800;line-height:1.3}
+.lives-text p{font-size:15px;color:var(--ink2)}
+.inj{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.inj div{background:var(--surface);border-radius:12px;padding:8px 14px}
+.inj .num{font-size:24px;font-weight:800;display:block;text-align:right}
+.inj .l{font-size:13px;color:var(--ink2);line-height:1.8}
+.inj .tag{margin-top:2px}
 
-footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.tip{position:fixed;z-index:20;pointer-events:none;background:var(--ink);color:#fff;font-size:13px;line-height:1.9;padding:4px 10px;border-radius:8px;opacity:0;transition:opacity .15s;max-width:260px}
+.tip.show{opacity:1}
 
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .reveal{opacity:1;transform:none}
-}
+details{border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+summary{cursor:pointer;padding:8px 16px;font-size:15px;color:var(--ink2)}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:4px 16px;border-top:1px solid var(--line);text-align:right;line-height:2}
+th{font-weight:600;color:var(--ink2);background:var(--surface)}
+td.num{text-align:left}
+.foot{font-size:12px;color:var(--muted);padding:14px 0 24px}
+
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<header class="hero">
-  <div class="wrap">
-    <div class="kicker">خصوصی رپورٹ · کراچی</div>
-    <h1>شہر کی سڑکوں پر <span>لُٹتے شہری</span></h1>
-    <div class="byline">ثاقب صغیر · یکم جنوری تا 5 نومبر 2026</div>
-    <div class="big">
-      <div class="num" id="heroCount" data-to="46617">0</div>
-      <p>اسٹریٹ کرائم کی وارداتیں رواں برس 5 نومبر تک پولیس کے پاس رپورٹ ہوئیں</p>
-    </div>
-    <div class="chips">
-      <div class="chip">قتل <b class="num">65</b></div>
-      <div class="chip">زخمی <b class="num">182</b></div>
-      <div class="chip">موبائل فون چھینے گئے <b class="num">16,821</b></div>
-      <div class="chip">گاڑیاں و موٹر سائیکلیں <b class="num">29,796</b></div>
-      <div class="chip">گزشتہ برس سے <b class="down num">−15%</b> وارداتیں</div>
-    </div>
-  </div>
-</header>
-
-<section>
-  <div class="wrap reveal">
-    <div class="kicker">ابھی، اس لمحے</div>
-    <h2>جب آپ یہ پڑھ رہے ہیں…</h2>
-    <p class="lede">رواں برس کی اوسط شرح کے مطابق کراچی میں ہر چند منٹ بعد ایک شہری لُٹ جاتا ہے۔ نیچے کی پٹیاں اسی رفتار سے بھر رہی ہیں۔</p>
-    <div class="clock-grid" id="clock"></div>
-    <div class="elapsed">یہ صفحہ کھلے <span class="num" id="elapsed">00:00</span> ہو چکے ہیں</div>
+<section class="sec rv">
+  <span class="period">یکم جنوری تا 5 نومبر 2026 · کراچی پولیس ریکارڈ</span>
+  <div class="kpis">
+    <button class="kpi" data-goto="s-change">
+      <div class="l">اسٹریٹ کرائم کی وارداتیں</div>
+      <div class="v num" data-count="46617">0</div>
+      <div class="d"><span class="tag down">−15.0%</span> <span class="go">گزشتہ برس سے</span></div>
+    </button>
+    <button class="kpi" data-goto="s-lives">
+      <div class="l">ڈاکوؤں کی فائرنگ سے قتل</div>
+      <div class="v num" data-count="65">0</div>
+      <div class="d"><span class="tag down">−4.4%</span> <span class="go">اور 182 زخمی</span></div>
+    </button>
+    <button class="kpi" data-goto="s-change">
+      <div class="l">موبائل فون چھینے گئے</div>
+      <div class="v num" data-count="16821">0</div>
+      <div class="d"><span class="tag up">+15.3%</span> <span class="go">واحد بڑھنے والا جرم</span></div>
+    </button>
+    <button class="kpi" data-goto="s-veh">
+      <div class="l">گاڑیاں و موٹر سائیکلیں</div>
+      <div class="v num" data-count="29796">0</div>
+      <div class="d"><span class="tag down">−26.3%</span> <span class="go">چوری و چھینی گئیں</span></div>
+    </button>
   </div>
 </section>
 
-<section>
-  <div class="wrap reveal">
-    <div class="kicker">انسانی قیمت</div>
-    <h2>65 جانیں، 182 زخمی</h2>
-    <p class="lede">ڈاکوؤں کی فائرنگ سے 65 شہری جان سے گئے۔ پولیس ریکارڈ کے مطابق ان میں سے 51 دورانِ ڈکیتی مزاحمت پر قتل ہوئے۔</p>
-    <div class="cost">
-      <div class="dots-card">
-        <div class="toggle" role="group" aria-label="سال منتخب کریں">
-          <button type="button" data-year="2026" aria-pressed="true">2026</button>
-          <button type="button" data-year="2025" aria-pressed="false">2025</button>
-        </div>
-        <div class="dots" id="dots" aria-hidden="true"></div>
-        <div class="legend" id="dotLegend"></div>
+<section class="sec rv" id="s-change">
+  <div class="eyebrow"><span class="n">01</span>گزشتہ برس سے موازنہ</div>
+  <h2>پہلے اندازہ لگائیں</h2>
+  <p class="lede">2025 کی اسی مدت کے مقابلے میں زیادہ تر جرائم کم ہوئے، مگر ایک جرم میں اضافہ ہوا۔</p>
+  <div class="quiz">
+    <div class="q">آپ کے خیال میں کس جرم میں اضافہ ہوا؟</div>
+    <div class="opts">
+      <button class="opt" data-k="bikes">موٹر سائیکل چوری / چھیننا<span class="mark"></span></button>
+      <button class="opt" data-k="phones">موبائل فون چھیننا<span class="mark"></span></button>
+      <button class="opt" data-k="cars">گاڑی چوری / چھیننا<span class="mark"></span></button>
+      <button class="opt" data-k="killed">ڈکیتی کے دوران قتل<span class="mark"></span></button>
+    </div>
+    <div class="verdict" id="verdict" aria-live="polite"></div>
+  </div>
+
+  <div class="seg" id="chgMode" role="group" aria-label="چارٹ کی قسم">
+    <button aria-pressed="true" data-m="pct">فیصد تبدیلی</button>
+    <button aria-pressed="false" data-m="abs">اصل تعداد</button>
+  </div>
+  <div class="chg" id="chg"></div>
+  <div class="locked" id="locked">جواب دیں تو چارٹ کھل جائے گا۔ <button id="skip">یا براہِ راست دیکھیں</button></div>
+  <div class="legend" id="chgLegend"></div>
+</section>
+
+<section class="sec rv" id="s-calc">
+  <div class="eyebrow"><span class="n">02</span>وقت کے حساب سے</div>
+  <h2>آپ کے وقت میں شہر کی سڑکوں پر کیا ہوتا ہے؟</h2>
+  <p class="lede">رواں برس کی یومیہ اوسط کے مطابق۔ وقت منتخب کریں یا اپنے روزانہ سفر کا دورانیہ بتائیں۔</p>
+  <div class="calc">
+    <div class="calc-top">
+      <div class="seg" id="span" role="group" aria-label="وقت منتخب کریں">
+        <button aria-pressed="false" data-s="live"><span class="live-dot"></span>یہ صفحہ پڑھتے ہوئے</button>
+        <button aria-pressed="false" data-s="commute">میرا روزانہ سفر</button>
+        <button aria-pressed="true" data-s="1440">ایک دن</button>
+        <button aria-pressed="false" data-s="10080">ایک ہفتہ</button>
+        <button aria-pressed="false" data-s="43200">ایک مہینہ</button>
       </div>
-      <div class="stat-stack">
-        <div class="stat">
-          <div class="t">ڈاکوؤں کی فائرنگ سے قتل</div>
-          <div class="num">65</div>
-          <div class="delta down">گزشتہ برس اسی مدت میں 68 · <span class="num">−4.4%</span></div>
-        </div>
-        <div class="stat">
-          <div class="t">زخمی</div>
-          <div class="num">182</div>
-          <div class="delta down">گزشتہ برس اسی مدت میں 272 · <span class="num">−33.1%</span></div>
-        </div>
-      </div>
+      <label class="slider" id="slider">
+        <span>روزانہ سڑک پر وقت:</span>
+        <input type="range" min="10" max="240" step="5" value="60" id="commute">
+        <span><span class="num" id="commuteV">60</span> منٹ</span>
+      </label>
     </div>
-    <p class="note">ہر دائرہ ایک جان ہے۔ سفید کنارے والے دائرے وہ اموات ہیں جنہیں پولیس نے “دورانِ ڈکیتی مزاحمت” کے طور پر درج کیا۔</p>
+    <p class="sentence" id="sentence" aria-live="polite"></p>
+    <div class="tiles" id="tiles"></div>
   </div>
 </section>
 
-<section>
-  <div class="wrap reveal">
-    <div class="kicker">2025 بمقابلہ 2026</div>
-    <h2>وارداتیں کم، مگر موبائل چھیننے میں اضافہ</h2>
-    <p class="lede">یکم جنوری سے 5 نومبر تک کی یکساں مدت کا موازنہ۔ زیادہ تر زمروں میں کمی آئی، مگر موبائل فون چھیننے کی وارداتیں 15 فیصد بڑھ گئیں۔</p>
-    <div class="compare" id="compare"></div>
+<section class="sec rv" id="s-veh">
+  <div class="eyebrow"><span class="n">03</span>گاڑیاں اور موٹر سائیکلیں</div>
+  <h2>ہر 100 میں سے 96 موٹر سائیکلیں</h2>
+  <p class="lede">رواں برس 29 ہزار 796 گاڑیاں اور موٹر سائیکلیں چوری یا چھینی گئیں۔ ہر خانہ تقریباً 298 سواریوں کے برابر ہے۔</p>
+  <div class="seg" id="vehMode" role="group" aria-label="تقسیم">
+    <button aria-pressed="true" data-v="type">کون سی سواری؟</button>
+    <button aria-pressed="false" data-v="how">کیسے لی گئی؟</button>
   </div>
+  <div class="wgrid">
+    <div class="waffle" id="waffle" role="img" aria-label="100 خانوں پر مشتمل چارٹ"></div>
+    <div class="wkey" id="wkey"></div>
+  </div>
+  <p class="wnote" id="wnote"></p>
 </section>
 
-<section>
-  <div class="wrap reveal">
-    <div class="kicker">گاڑیاں اور موٹر سائیکلیں</div>
-    <h2>29 ہزار 796 گاڑیاں اور موٹر سائیکلیں</h2>
-    <p class="lede">زیادہ تر نشانہ موٹر سائیکلیں بنیں — اور بیشتر واقعات چھیننے کے بجائے چوری کے تھے۔</p>
-    <div class="veh">
-      <div class="card">
-        <h3>کیا نشانہ بنا؟</h3>
-        <div class="split" data-split>
-          <div class="a" data-v="28495">96%</div>
-          <div class="c" data-v="1301">4%</div>
-        </div>
-        <div class="kv"><span><i class="sw" style="background:var(--red)"></i>موٹر سائیکلیں</span><span class="num">28,495</span></div>
-        <div class="kv"><span><i class="sw" style="background:var(--blue)"></i>گاڑیاں</span><span class="num">1,301</span></div>
-      </div>
-      <div class="card">
-        <h3>کیسے؟</h3>
-        <div class="split" data-split>
-          <div class="b2" data-v="25523">86%</div>
-          <div class="a" data-v="4273">14%</div>
-        </div>
-        <div class="kv"><span><i class="sw" style="background:var(--amber)"></i>چوری کی گئیں</span><span class="num">25,523</span></div>
-        <div class="kv"><span><i class="sw" style="background:var(--red)"></i>اسلحے کے زور پر چھینی گئیں</span><span class="num">4,273</span></div>
+<section class="sec rv" id="s-lives">
+  <div class="eyebrow"><span class="n">04</span>انسانی قیمت</div>
+  <h2>ہر نشان ایک زندگی</h2>
+  <p class="lede">ڈکیتی کی وارداتوں میں جان سے جانے والے شہری۔ دیکھیں پولیس ریکارڈ اور مجموعی تعداد میں کیا فرق ہے۔</p>
+  <div class="seg" id="lifeMode" role="group" aria-label="منظر">
+    <button aria-pressed="true" data-l="all">تمام اموات</button>
+    <button aria-pressed="false" data-l="police">پولیس ریکارڈ</button>
+    <button aria-pressed="false" data-l="y25">2025 سے موازنہ</button>
+  </div>
+  <div class="lives">
+    <div class="people" id="people" aria-hidden="true"></div>
+    <div>
+      <div class="lives-text" id="lifeText" aria-live="polite"></div>
+      <div class="inj">
+        <div><div class="l">زخمی 2026</div><span class="num">182</span><span class="tag down">−33.1%</span></div>
+        <div><div class="l">زخمی 2025</div><span class="num" style="color:var(--muted)">272</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap reveal">
-    <div class="kicker">یومیہ اوسط</div>
-    <h2>ہر روز کا حساب</h2>
-    <p class="lede">رواں برس 5 نومبر تک کی یومیہ شرح۔ ہر خانہ ایک واردات ہے۔</p>
-    <div class="daily">
-      <div class="d"><div class="t">موٹر سائیکلیں چوری / چھینی گئیں</div><div class="num">92.21</div><div class="t">روزانہ</div><div class="icons" data-n="92.21"></div></div>
-      <div class="d"><div class="t">موبائل فون چھینے گئے</div><div class="num">54.43</div><div class="t">روزانہ</div><div class="icons" data-n="54.43"></div></div>
-      <div class="d"><div class="t">گاڑیاں چوری / چھینی گئیں</div><div class="num">4.21</div><div class="t">روزانہ</div><div class="icons" data-n="4.21"></div></div>
-    </div>
-  </div>
+<section class="sec" style="padding-top:20px">
+  <details>
+    <summary>تمام اعداد و شمار ٹیبل کی شکل میں</summary>
+    <div class="tbl"><table>
+      <thead><tr><th>زمرہ (یکم جنوری تا 5 نومبر)</th><th>2025</th><th>2026</th></tr></thead>
+      <tbody>
+        <tr><td>اسٹریٹ کرائم کی وارداتیں</td><td class="num">54,850</td><td class="num">46,617</td></tr>
+        <tr><td>ڈاکوؤں کی فائرنگ سے قتل</td><td class="num">68</td><td class="num">65</td></tr>
+        <tr><td>مزاحمت پر قتل (پولیس ریکارڈ)</td><td class="num">—</td><td class="num">51</td></tr>
+        <tr><td>زخمی</td><td class="num">272</td><td class="num">182</td></tr>
+        <tr><td>موبائل فون چھینے گئے</td><td class="num">14,587</td><td class="num">16,821</td></tr>
+        <tr><td>گاڑیاں چوری / چھینی گئیں</td><td class="num">1,843</td><td class="num">1,301</td></tr>
+        <tr><td>موٹر سائیکلیں چوری / چھینی گئیں</td><td class="num">38,420</td><td class="num">28,495</td></tr>
+        <tr><td>گاڑیاں و موٹر سائیکلیں: چھینی گئیں</td><td class="num">—</td><td class="num">4,273</td></tr>
+        <tr><td>گاڑیاں و موٹر سائیکلیں: چوری</td><td class="num">—</td><td class="num">25,523</td></tr>
+      </tbody>
+    </table></div>
+  </details>
+  <p class="foot">ماخذ: کراچی پولیس ریکارڈ۔ وقت کے حساب والے اعداد رواں برس کی یومیہ اوسط (309 دن) سے نکالے گئے تخمینے ہیں۔</p>
 </section>
 
-<footer>
-  <div class="wrap">
-    ماخذ: کراچی پولیس ریکارڈ (یکم جنوری تا 5 نومبر 2025 اور 2026)۔ رپورٹ: ثاقب صغیر۔ “ابھی، اس لمحے” والے حصے میں وقفے رواں برس کی یومیہ اوسط سے نکالے گئے تخمینے ہیں۔
-  </div>
-</footer>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
 
 <script>
 (function(){
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fmt = function(n){ return Math.round(n).toLocaleString('en-US'); };
-  var DAYS = 309; // 1 Jan – 5 Nov 2026
-  var PERIOD = DAYS * 86400; // seconds
+  var $ = function(s,r){ return (r||document).querySelector(s); };
+  var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); };
 
-  // Hero count-up
+  function seg(el, cb){
+    $$('button', el).forEach(function(b){
+      b.addEventListener('click', function(){
+        $$('button', el).forEach(function(x){ x.setAttribute('aria-pressed', x === b); });
+        cb(b);
+      });
+    });
+  }
+
+  /* Tooltip */
+  var tip = $('#tip');
+  function moveTip(e){
+    var w = tip.offsetWidth;
+    tip.style.left = Math.max(8, Math.min(innerWidth - w - 8, e.clientX - w/2)) + 'px';
+    tip.style.top = Math.max(8, e.clientY - tip.offsetHeight - 12) + 'px';
+  }
+  function showTip(e, html){ tip.innerHTML = html; tip.classList.add('show'); moveTip(e); }
+  function hideTip(){ tip.classList.remove('show'); }
+
+  /* Overview */
   function countUp(el, to, ms){
     if (reduce) { el.textContent = fmt(to); return; }
     var t0 = performance.now();
-    (function step(t){
-      var p = Math.min(1, (t - t0) / ms), e = 1 - Math.pow(1 - p, 4);
-      el.textContent = fmt(to * e);
-      if (p < 1) requestAnimationFrame(step);
-    })(t0);
+    (function step(t){ var p = Math.min(1,(t-t0)/ms), e = 1-Math.pow(1-p,4); el.textContent = fmt(to*e); if (p<1) requestAnimationFrame(step); })(t0);
   }
-  var hero = document.getElementById('heroCount');
-  countUp(hero, +hero.dataset.to, 2200);
-
-  // Live clock: one bar per category, filling at this year's average pace
-  var items = [
-    {label:'اسٹریٹ کرائم کی ایک واردات', total:46617, unit:'وارداتیں'},
-    {label:'ایک موٹر سائیکل چوری یا چھینی جاتی ہے', total:28495, unit:'موٹر سائیکلیں'},
-    {label:'ایک موبائل فون چھینا جاتا ہے', total:16821, unit:'موبائل فون'},
-    {label:'ایک گاڑی چوری یا چھینی جاتی ہے', total:1301, unit:'گاڑیاں'}
-  ];
-  function every(sec){
-    var h = Math.floor(sec/3600), m = Math.floor(sec%3600/60), s = Math.round(sec%60);
-    if (s === 60) { m++; s = 0; }
-    var parts = [];
-    if (h) parts.push('<span class="num">'+h+'</span> گھنٹے');
-    if (m) parts.push('<span class="num">'+m+'</span> منٹ');
-    if (!h && s) parts.push('<span class="num">'+s+'</span> سیکنڈ');
-    return 'ہر ' + parts.join(' ') + ' میں';
-  }
-  var clock = document.getElementById('clock');
-  items.forEach(function(it){
-    it.interval = PERIOD / it.total;
-    var d = document.createElement('div');
-    d.className = 'tick';
-    d.innerHTML = '<div class="every">'+every(it.interval)+'</div><div class="label">'+it.label+'</div>' +
-      '<div class="bar" style="margin-top:12px"><i></i></div>' +
-      '<div class="count"><span>اس دوران اندازاً</span><span><span class="num">0</span> '+it.unit+'</span></div>';
-    clock.appendChild(d);
-    it.el = d; it.fill = d.querySelector('.bar i'); it.n = d.querySelector('.count .num'); it.last = 0;
+  $$('[data-count]').forEach(function(el){ countUp(el, +el.dataset.count, 1600); });
+  $$('[data-goto]').forEach(function(b){
+    b.addEventListener('click', function(){ document.getElementById(b.dataset.goto).scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'start'}); });
   });
-  var start = Date.now(), elapsedEl = document.getElementById('elapsed');
-  function tick(){
-    var sec = (Date.now() - start) / 1000;
-    var mm = Math.floor(sec/60), ss = Math.floor(sec%60);
-    elapsedEl.textContent = (mm<10?'0':'')+mm+':'+(ss<10?'0':'')+ss;
-    items.forEach(function(it){
-      var done = Math.floor(sec / it.interval);
-      it.fill.style.width = ((sec % it.interval) / it.interval * 100) + '%';
-      if (done !== it.last) {
-        it.last = done; it.n.textContent = done;
-        it.el.classList.remove('flash'); void it.el.offsetWidth; it.el.classList.add('flash');
+
+  /* 01 — guess, then year-on-year chart */
+  var DATA = [
+    {k:'total',  n:'اسٹریٹ کرائم کی وارداتیں', a:54850, b:46617},
+    {k:'bikes',  n:'موٹر سائیکلیں چوری / چھینی گئیں', a:38420, b:28495},
+    {k:'phones', n:'موبائل فون چھینے گئے', a:14587, b:16821},
+    {k:'cars',   n:'گاڑیاں چوری / چھینی گئیں', a:1843, b:1301},
+    {k:'injured',n:'زخمی', a:272, b:182},
+    {k:'killed', n:'ڈکیتی کے دوران قتل', a:68, b:65}
+  ];
+  var byK = {};
+  DATA.forEach(function(d){ d.p = (d.b - d.a) / d.a * 100; byK[d.k] = d; });
+  var MAXP = 50, chg = $('#chg'), mode = 'pct', unlocked = false;
+  function pctStr(p){ return (p>0?'+':'−') + Math.abs(p).toFixed(1) + '%'; }
+  function renderChange(){
+    chg.innerHTML = '';
+    DATA.forEach(function(d){
+      var row = document.createElement('div'); row.className = 'crow';
+      var head = '<div><div class="name">'+d.n+'</div><div class="sub"><span class="num">2025</span> میں <span class="num">'+fmt(d.a)+'</span> · <span class="num">2026</span> میں <span class="num">'+fmt(d.b)+'</span></div></div>';
+      if (mode === 'pct') {
+        var up = d.p > 0, w = Math.min(50, Math.abs(d.p)/MAXP*50);
+        var pos = (up ? 'left' : 'right') + ':calc(50% + ' + w + '% + 6px)';
+        row.innerHTML = head + '<div class="axis"><div class="bar '+(up?'up':'down')+'" data-w="'+w+'"></div><span class="lab" style="'+pos+';color:var(--'+(up?'red':'green')+')">'+pctStr(d.p)+'</span></div>';
+      } else {
+        var m = Math.max(d.a, d.b);
+        row.innerHTML = head + '<div class="pair">' +
+          '<div class="pb y25"><span>2025</span><div class="t"><div class="f" data-w="'+(d.a/m*78)+'"></div><span class="v" data-w="'+(d.a/m*78)+'">'+fmt(d.a)+'</span></div></div>' +
+          '<div class="pb y26"><span>2026</span><div class="t"><div class="f" data-w="'+(d.b/m*78)+'"></div><span class="v" data-w="'+(d.b/m*78)+'">'+fmt(d.b)+'</span></div></div></div>';
+      }
+      row.addEventListener('mouseenter', function(e){ showTip(e, '<b>'+d.n+'</b><br>2025: <span class="num">'+fmt(d.a)+'</span> · 2026: <span class="num">'+fmt(d.b)+'</span> · <span class="num">'+pctStr(d.p)+'</span>'); });
+      row.addEventListener('mousemove', moveTip);
+      row.addEventListener('mouseleave', hideTip);
+      chg.appendChild(row);
+    });
+    $('#chgLegend').innerHTML = mode === 'pct'
+      ? '<span><i style="background:var(--green)"></i>کمی</span><span><i style="background:var(--red)"></i>اضافہ</span>'
+      : '<span><i style="background:var(--gray)"></i>2025</span><span><i style="background:var(--red)"></i>2026</span>';
+    $$('.pb .v', chg).forEach(function(v){ v.style.right = 'calc(' + v.dataset.w + '% + 6px)'; });
+    if (unlocked) requestAnimationFrame(function(){ requestAnimationFrame(growChange); });
+  }
+  function growChange(){ $$('[data-w].bar, .pb .f', chg).forEach(function(b){ b.style.width = b.dataset.w + '%'; }); }
+  function unlock(){ if (unlocked) return; unlocked = true; chg.classList.add('on'); $('#locked').classList.add('hide'); growChange(); }
+  seg($('#chgMode'), function(b){ mode = b.dataset.m; renderChange(); });
+  renderChange();
+
+  var answered = false;
+  function answer(pick){
+    if (answered) return; answered = true;
+    $$('.opt').forEach(function(o){
+      var d = byK[o.dataset.k], mk = $('.mark', o);
+      o.disabled = true;
+      mk.textContent = pctStr(d.p);
+      mk.style.color = d.p > 0 ? 'var(--red)' : 'var(--green)';
+      o.classList.add(o.dataset.k === 'phones' ? 'right' : 'wrong');
+    });
+    var lead = pick === null ? '' : pick === 'phones' ? '<b>درست!</b> ' : '<b>اندازہ درست نہیں۔</b> ';
+    $('#verdict').innerHTML = lead + 'صرف <b>موبائل فون چھیننے</b> کی وارداتیں بڑھیں: 14 ہزار 587 سے 16 ہزار 821 تک، یعنی <span class="num">+15.3%</span>۔ باقی تمام زمروں میں کمی آئی۔';
+    unlock();
+  }
+  $$('.opt').forEach(function(o){ o.addEventListener('click', function(){ answer(o.dataset.k); }); });
+  $('#skip').addEventListener('click', function(){ answer(null); });
+
+  /* 02 — time calculator (daily averages over 309 days) */
+  var DAY = 1440;
+  var RATES = [
+    {n:'وارداتیں', perDay:46617/309, ic:'<path d="M12 3 2 20h20L12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 10v4M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'},
+    {n:'موٹر سائیکلیں', perDay:92.21, ic:'<circle cx="5.5" cy="16.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18.5" cy="16.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5.5 16.5 10 10h5l3.5 6.5M14 6h3l1 4M9 10H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>'},
+    {n:'موبائل فون', perDay:54.43, ic:'<rect x="6.5" y="2.5" width="11" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>'},
+    {n:'گاڑیاں', perDay:4.21, ic:'<path d="M3 16v-3l2-5h14l2 5v3H3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="2" fill="currentColor"/><circle cx="16.5" cy="17" r="2" fill="currentColor"/>'}
+  ];
+  function everyText(perDay){
+    var mins = DAY / perDay;
+    if (mins < 60) return 'اوسطاً ہر <span class="num">' + Math.round(mins) + '</span> منٹ میں ایک';
+    return 'اوسطاً ہر <span class="num">' + (mins/60).toFixed(1) + '</span> گھنٹے میں ایک';
+  }
+  var tiles = $('#tiles');
+  RATES.forEach(function(r){
+    var t = document.createElement('div'); t.className = 'tile';
+    t.innerHTML = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">'+r.ic+'</svg><div class="v">0</div><div class="l">'+r.n+'</div><div class="every">'+everyText(r.perDay)+'</div>';
+    tiles.appendChild(t); r.el = t; r.v = $('.v', t); r.last = null;
+  });
+  var spanMode = '1440', liveStart = 0, liveTimer = null;
+  function show(n){
+    if (spanMode === 'live') return String(Math.floor(n));
+    return n >= 10 ? fmt(n) : n >= 1 ? n.toFixed(1) : n.toFixed(2);
+  }
+  function lead(mins){
+    if (spanMode === 'live') {
+      var s = Math.floor(mins*60), mm = Math.floor(s/60), ss = s%60;
+      return 'جب سے آپ یہ صفحہ پڑھ رہے ہیں (<span class="num">'+mm+':'+(ss<10?'0':'')+ss+'</span>)، کراچی میں اندازاً';
+    }
+    if (spanMode === 'commute') return 'آپ کے روزانہ <span class="num">'+mins+'</span> منٹ کے سفر کے دوران کراچی میں اوسطاً';
+    return {1440:'ایک دن',10080:'ایک ہفتے',43200:'ایک مہینے'}[spanMode] + ' میں کراچی میں اوسطاً';
+  }
+  function calc(mins){
+    var vals = RATES.map(function(r){ return r.perDay * mins / DAY; });
+    RATES.forEach(function(r,i){
+      var txt = show(vals[i]);
+      if (txt !== r.last) {
+        r.v.textContent = txt;
+        if (spanMode === 'live' && r.last !== null && !reduce) { r.el.classList.remove('bump'); void r.el.offsetWidth; r.el.classList.add('bump'); }
+        r.last = txt;
       }
     });
+    var n = function(i){ return '<span class="num">'+show(vals[i])+'</span>'; };
+    $('#sentence').innerHTML = lead(mins) + ' ' + n(0) + ' <b>وارداتیں</b> ہوتی ہیں، جن میں ' +
+      n(1) + ' <b>موٹر سائیکلیں</b>، ' + n(2) + ' <b>موبائل فون</b> اور ' + n(3) + ' <b>گاڑیاں</b> شہریوں سے چھن جاتی ہیں۔';
   }
-  tick(); setInterval(tick, 250);
+  function setSpan(m){
+    spanMode = m; clearInterval(liveTimer);
+    $('#slider').classList.toggle('show', m === 'commute');
+    RATES.forEach(function(r){ r.last = null; });
+    if (m === 'live') {
+      liveStart = Date.now();
+      var run = function(){ calc((Date.now() - liveStart) / 60000); };
+      run(); liveTimer = setInterval(run, 500);
+    } else calc(m === 'commute' ? +$('#commute').value : +m);
+  }
+  seg($('#span'), function(b){ setSpan(b.dataset.s); });
+  $('#commute').addEventListener('input', function(e){ $('#commuteV').textContent = e.target.value; calc(+e.target.value); });
+  setSpan('1440');
 
-  // Dots: lives lost, switchable by year
-  var dotsEl = document.getElementById('dots'), legend = document.getElementById('dotLegend');
-  var YEARS = {
-    2026:{killed:65, police:51, html:'<span><i></i>فائرنگ سے قتل: <b class="num">65</b></span><span><i class="p"></i>پولیس ریکارڈ میں مزاحمت پر قتل: <b class="num">51</b></span>'},
-    2025:{killed:68, police:0,  html:'<span><i></i>ڈکیتی مزاحمت پر قتل: <b class="num">68</b></span>'}
+  /* 03 — 100-square waffle */
+  var VTOTAL = 29796;
+  var VEH = {
+    type:{ note:'گاڑیوں کے مقابلے میں موٹر سائیکلیں 22 گنا زیادہ نشانہ بنیں۔', items:[
+      {n:'موٹر سائیکلیں', v:28495, c:'var(--red)'},
+      {n:'گاڑیاں', v:1301, c:'var(--blue)'}]},
+    how:{ note:'زیادہ تر سواریاں چوری ہوئیں؛ ہر سات میں سے تقریباً ایک اسلحے کے زور پر چھینی گئی۔', items:[
+      {n:'چوری کی گئیں', v:25523, c:'var(--amber)', s:'مالک کی غیر موجودگی میں'},
+      {n:'چھینی گئیں', v:4273, c:'var(--red)', s:'اسلحے کے زور پر'}]}
   };
-  for (var i=0;i<78;i++){ var s=document.createElement('div'); s.className='dot'; dotsEl.appendChild(s); }
-  function showYear(y){
-    var d = YEARS[y], dots = dotsEl.children;
-    for (var i=0;i<dots.length;i++){
-      (function(el,i){
-        setTimeout(function(){
-          el.classList.toggle('on', i < d.killed);
-          el.classList.toggle('police', i < d.police);
-        }, reduce ? 0 : i*14);
-      })(dots[i],i);
-    }
-    legend.innerHTML = d.html;
-    document.querySelectorAll('.toggle button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.year == y); });
+  var waffle = $('#waffle'), cells = [], vehKey = 'type';
+  for (var i=0;i<100;i++){ var c = document.createElement('i'); waffle.appendChild(c); cells.push(c); }
+  function renderVeh(key, animate){
+    vehKey = key;
+    var set = VEH[key], wkey = $('#wkey'), idx = 0;
+    var raw = set.items.map(function(it){ return it.v / VTOTAL * 100; });
+    var sq = raw.map(Math.floor), rem = 100 - sq.reduce(function(a,b){ return a+b; }, 0);
+    raw.map(function(r,i){ return [r - sq[i], i]; }).sort(function(a,b){ return b[0]-a[0]; }).slice(0, rem).forEach(function(x){ sq[x[1]]++; });
+    wkey.innerHTML = '';
+    set.items.forEach(function(it, j){
+      for (var k = idx; k < idx + sq[j]; k++) (function(cell, k){
+        cell.dataset.g = j;
+        var paint = function(){ cell.style.background = it.c; };
+        animate && !reduce ? setTimeout(paint, k*9) : paint();
+      })(cells[k], k);
+      idx += sq[j];
+      wkey.insertAdjacentHTML('beforeend', '<div class="wk" data-g="'+j+'"><i style="background:'+it.c+'"></i><div class="t">'+it.n+(it.s?'<small>'+it.s+'</small>':'')+'</div><div><div class="v">'+fmt(it.v)+'</div><div class="pc">'+(it.v/VTOTAL*100).toFixed(1)+'%</div></div></div>');
+    });
+    $('#wnote').textContent = set.note;
   }
-  document.querySelectorAll('.toggle button').forEach(function(b){ b.addEventListener('click', function(){ showYear(b.dataset.year); }); });
-
-  // Year-on-year comparison
-  var rows = [
-    ['اسٹریٹ کرائم کی کل وارداتیں', 54850, 46617],
-    ['موٹر سائیکلیں چوری / چھینی گئیں', 38420, 28495],
-    ['موبائل فون چھینے گئے', 14587, 16821],
-    ['گاڑیاں چوری / چھینی گئیں', 1843, 1301],
-    ['زخمی', 272, 182],
-    ['قتل', 68, 65]
-  ];
-  var cmp = document.getElementById('compare');
-  rows.forEach(function(r){
-    var max = Math.max(r[1], r[2]), ch = (r[2]-r[1])/r[1]*100, cls = ch < 0 ? 'down' : 'up';
-    var el = document.createElement('div'); el.className = 'row';
-    el.innerHTML = '<div class="row-h"><span class="name">'+r[0]+'</span><span class="pill '+cls+'">'+(ch>0?'+':'−')+Math.abs(ch).toFixed(1)+'%</span></div>' +
-      '<div class="bars">' +
-      '<div class="b y25"><span class="yr">2025</span><div class="track"><div class="fill" data-w="'+(r[1]/max*100)+'"></div></div><span class="v num">'+fmt(r[1])+'</span></div>' +
-      '<div class="b y26"><span class="yr">2026</span><div class="track"><div class="fill" data-w="'+(r[2]/max*100)+'"></div></div><span class="v num">'+fmt(r[2])+'</span></div>' +
-      '</div>';
-    cmp.appendChild(el);
+  function hl(g){ $$('.wk').forEach(function(w){ w.classList.toggle('hl', w.dataset.g === g); }); }
+  cells.forEach(function(cell){
+    cell.addEventListener('mouseenter', function(e){
+      var it = VEH[vehKey].items[+cell.dataset.g]; if (!it) return;
+      hl(cell.dataset.g);
+      showTip(e, '<b>'+it.n+'</b>: <span class="num">'+fmt(it.v)+'</span> · <span class="num">'+(it.v/VTOTAL*100).toFixed(1)+'%</span>');
+    });
+    cell.addEventListener('mousemove', moveTip);
+    cell.addEventListener('mouseleave', function(){ hideTip(); hl(null); });
   });
+  seg($('#vehMode'), function(b){ renderVeh(b.dataset.v, true); });
 
-  // Daily icon grids
-  document.querySelectorAll('.icons').forEach(function(box){
-    var n = parseFloat(box.dataset.n), whole = Math.floor(n);
-    for (var i=0;i<whole;i++) box.appendChild(document.createElement('i'));
-    if (n > whole) { var p = document.createElement('i'); p.className = 'part'; box.appendChild(p); }
-  });
-
-  // Animate things when they scroll into view
-  function activate(sec){
-    sec.classList.add('in');
-    sec.querySelectorAll('.fill').forEach(function(f){ f.style.width = f.dataset.w + '%'; });
-    sec.querySelectorAll('[data-split] > div').forEach(function(d){ d.style.flexGrow = d.dataset.v; });
-    if (sec.querySelector('#dots') && !sec.dataset.done) { sec.dataset.done = 1; showYear(2026); }
+  /* 04 — lives */
+  var PERSON = '<svg viewBox="0 0 20 28" aria-hidden="true"><circle cx="10" cy="5.5" r="4.5" fill="currentColor"/><path d="M2 27v-9a8 8 0 0 1 16 0v9Z" fill="currentColor"/></svg>';
+  var people = $('#people');
+  for (var p=0;p<72;p++) people.insertAdjacentHTML('beforeend', PERSON);
+  var figs = $$('svg', people);
+  var LIFE = {
+    all:{ big:'65', text:'شہری رواں برس 5 نومبر تک ڈاکوؤں کی فائرنگ سے جاں بحق ہوئے، یعنی اوسطاً تقریباً ہر پانچ دن میں ایک جان۔',
+      paint:function(i){ return i < 65 ? 'k' : ''; } },
+    police:{ big:'51', text:'پولیس ریکارڈ میں 65 میں سے 51 اموات “دورانِ ڈکیتی مزاحمت” درج ہیں (گہرا رنگ)۔ باقی 14 اس زمرے میں شامل نہیں۔',
+      paint:function(i){ return i < 51 ? 'p' : i < 65 ? 'k dim' : ''; } },
+    y25:{ big:'68 → 65', text:'گزشتہ برس اسی مدت میں ڈکیتی مزاحمت پر 68 شہری قتل ہوئے تھے (سرمئی نشان)۔ رواں برس یہ تعداد صرف 3 کم ہے۔',
+      paint:function(i){ return i < 65 ? 'k' : i < 68 ? 'ghost' : ''; } }
+  };
+  function renderLives(key, animate){
+    var L = LIFE[key];
+    figs.forEach(function(f,i){
+      var go = function(){ f.setAttribute('class', L.paint(i)); };
+      animate && !reduce ? setTimeout(go, i*12) : go();
+    });
+    $('#lifeText').innerHTML = '<div class="big num">'+L.big+'</div><p>'+L.text+'</p>';
   }
-  var reveals = document.querySelectorAll('.reveal');
+  seg($('#lifeMode'), function(b){ renderLives(b.dataset.l, true); });
+  $('#lifeText').innerHTML = '<div class="big num">65</div><p>'+LIFE.all.text+'</p>';
+
+  /* First time a section scrolls into view, play its animation */
+  var onShow = { 's-veh': function(){ renderVeh('type', true); }, 's-lives': function(){ renderLives('all', true); } };
+  function reveal(el){ el.classList.add('in'); if (onShow[el.id]) { onShow[el.id](); delete onShow[el.id]; } }
+  var rvs = $$('.rv');
   if ('IntersectionObserver' in window && !reduce) {
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if (e.isIntersecting) { activate(e.target); io.unobserve(e.target); } });
-    }, {threshold:.15});
-    reveals.forEach(function(r){ io.observe(r); });
-  } else reveals.forEach(activate);
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ reveal(e.target); io.unobserve(e.target); } }); }, {threshold:.12});
+    rvs.forEach(function(r){ io.observe(r); });
+  } else rvs.forEach(reveal);
 
-  // Tell a parent page our height so the iframe can size itself
-  function postHeight(){
-    if (window.parent !== window) window.parent.postMessage({type:'khi-crime-2026-height', height: document.documentElement.scrollHeight}, '*');
-  }
-  window.addEventListener('load', postHeight);
-  window.addEventListener('resize', postHeight);
+  /* Report height to the host page so the iframe fits the content */
+  function postHeight(){ if (window.parent !== window) window.parent.postMessage({type:'khi-crime-2026-height', height:document.documentElement.scrollHeight}, '*'); }
+  addEventListener('load', postHeight); addEventListener('resize', postHeight);
   if ('ResizeObserver' in window) new ResizeObserver(postHeight).observe(document.body);
 })();
 </script>
