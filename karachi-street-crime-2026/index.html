@@ -542,6 +542,32 @@ td.num{text-align:left}
   addEventListener('load', postHeight); addEventListener('resize', postHeight);
   if ('ResizeObserver' in window) new ResizeObserver(postHeight).observe(document.body);
 })();
+
+(function () {
+    const allowedOrigins = [
+        'https://www.geonewsurdu.tv',
+        'https://apnegnu.geo.tv'
+    ];
+
+    function sendHeight() {
+        const height = Math.max(
+            document.documentElement.scrollHeight,
+            document.body.scrollHeight
+        );
+
+        allowedOrigins.forEach(function (origin) {
+            window.parent.postMessage({
+                type: 'iframeHeight',
+                height: height
+            }, origin);
+        });
+    }
+
+    window.addEventListener('load', sendHeight);
+    new ResizeObserver(sendHeight).observe(document.documentElement);
+    window.addEventListener('resize', sendHeight);
+})();
+
 </script>
 </body>
 </html>
