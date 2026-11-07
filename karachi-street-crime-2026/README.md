@@ -33,3 +33,18 @@ The script resizes the iframe to fit the content, so readers never see a second 
 | Motorcycles snatched/stolen | 38,420 | 28,495 |
 
 2026 vehicles + bikes: 4,273 snatched, 25,523 stolen. Daily rates are over 309 days.
+
+## Fonts
+
+Urdu text uses **Nafees Web Naskh**, loaded from
+[manzarelahi/myfonts](https://github.com/manzarelahi/myfonts) (`nafeesweb.woff`, then `nafeesweb.ttf`) via jsDelivr:
+
+    https://cdn.jsdelivr.net/gh/manzarelahi/myfonts@main/nafeesweb.woff
+
+Backup font: Noto Nastaliq Urdu (Google Fonts). Numbers use Inter.
+
+Note: the current `nafeesweb` files contain only Latin letters, digits and punctuation,
+so Urdu text falls back to Noto Nastaliq Urdu until they are replaced with a complete
+Nafees Web Naskh. After replacing them, jsDelivr may serve the old file for up to 7 days;
+to refresh it right away, open
+`https://purge.jsdelivr.net/gh/manzarelahi/myfonts@main/nafeesweb.woff` (and the `.ttf` one).
